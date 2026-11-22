@@ -440,10 +440,9 @@ void Dialog::initAdvancedConfigUi(QWidget *parent)
 
     m_configLanguageBox = new QComboBox(group);
     m_configLanguageBox->addItem(tr("Automatic"), "Auto");
-    m_configLanguageBox->addItem("简体中文", "zh_CN");
     m_configLanguageBox->addItem("English", "en_US");
-    m_configLanguageBox->addItem("日本語", "ja_JP");
-    m_configLanguageBox->addItem("한국어", "ko_KR");
+    m_configLanguageBox->addItem("O'zbekcha", "uz_UZ");
+    m_configLanguageBox->addItem("Русский", "ru_RU");
     layout->addRow(tr("Language"), m_configLanguageBox);
 
     m_configTitleEdit = new QLineEdit(group);

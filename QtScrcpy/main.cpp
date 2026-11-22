@@ -206,26 +206,21 @@ void installTranslator()
     QLocale locale;
     QLocale::Language language = locale.language();
 
-    if (Config::getInstance().getLanguage() == "zh_CN") {
-        language = QLocale::Chinese;
+    if (Config::getInstance().getLanguage() == "uz_UZ") {
+        language = QLocale::Uzbek;
+    } else if (Config::getInstance().getLanguage() == "ru_RU") {
+        language = QLocale::Russian;
     } else if (Config::getInstance().getLanguage() == "en_US") {
         language = QLocale::English;
-    } else if (Config::getInstance().getLanguage() == "ja_JP") {
-        language = QLocale::Japanese;
-    } else if (Config::getInstance().getLanguage() == "ko_KR") {
-        language = QLocale::Korean;
     }
 
     QString languagePath = ":/i18n/";
     switch (language) {
-    case QLocale::Chinese:
-        languagePath += "zh_CN.qm";
+    case QLocale::Uzbek:
+        languagePath += "uz_UZ.qm";
         break;
-    case QLocale::Japanese:
-        languagePath += "ja_JP.qm";
-        break;
-    case QLocale::Korean:
-        languagePath += "ko_KR.qm";
+    case QLocale::Russian:
+        languagePath += "ru_RU.qm";
         break;
     case QLocale::English:
     default:
